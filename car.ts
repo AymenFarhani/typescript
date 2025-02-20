@@ -1,4 +1,4 @@
-export type Car = {
+export interface Car  {
     id: number;
     mode: string;
     marque: string;
