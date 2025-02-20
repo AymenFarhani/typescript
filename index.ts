@@ -1,6 +1,8 @@
+
 import { StudentManager } from './studentManager';
 import { Project } from "./project";
 import { ProjectManager } from "./projectManager";
+import { CarManager } from './carManager';
 
 
 let nextId : number  = 1;
@@ -35,3 +37,15 @@ console.log("-----------------------------------");
 studentManager.updateStudent(1, { fullName: "Johnathan Doe" }); // Update student with id 1
 console.log("-----------------------------------");
 studentManager.deleteStudent(2); 
+
+console.log("====================================");
+console.log("====================================");
+
+// Example usage
+const carManager = new CarManager();
+carManager.createCar({ id: 1, mode: 'Sedan', marque: 'Toyota', price: 20000, constructionDate: new Date('2019-01-01') });
+carManager.createCar({ id: 2, mode: 'SUV', marque: 'Ford', price: 25000, constructionDate: new Date('2020-03-15') });
+
+carManager.getCar(1); // Retrieve the car with id 1
+carManager.updateCar(1, { price: 21000 }); // Update car with id 1, changing its price
+carManager.deleteCar(2); // Delete car with id 2
